@@ -42,10 +42,11 @@ class TaggableSubscriber implements EventSubscriber
 
 	public function getSubscribedEvents()
 	{
+		// onFlush and postPersit events are not helping, disable them for now
 		return array(
-				Events::onFlush,
+				//Events::onFlush,
 				Events::postLoad,
-				Events::postPersist,
+				//Events::postPersist,
 		);
 	}
 
